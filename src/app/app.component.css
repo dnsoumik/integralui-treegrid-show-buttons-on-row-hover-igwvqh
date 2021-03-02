@@ -1,0 +1,119 @@
+.app-block
+{
+}
+.treegrid-rwhov-normal
+{
+    width: 800px;
+    height: 400px;
+}
+.treegrid-rwhov-normal .iui-treegrid-expand-box
+{
+    margin: -1px 7px 0 0;
+}
+.treegrid-rwhov-normal .iui-treegrid-row-hovered
+{
+    background-color: #f5f5f5;
+}
+.treegrid-rwhov-normal .iui-treegrid-row-selected
+{
+    background-color: #e5e5e5;
+    color: black;
+}
+
+.treegrid-rwhov-cell-label
+{
+    display: inline-block;
+    margin-top: 5px;
+    padding: 1px 0;
+}
+.treegrid-rwhov-normal .iui-editor-dropdown-button, .treegrid-rwhov-normal .iui-editor-label
+{
+    margin-top: 3px;
+}
+
+.treegrid-rwhov-cell-favorite {
+    background-image: url(https://www.lidorsystems.com/images/integralui-web/resources/icons-x24.png);
+    background-repeat: no-repeat;
+    background-position: -216px -72px;
+    display: inline-block;
+    opacity: 0.5;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 3px 0 0 3px;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+}
+.treegrid-rwhov-cell-favorite-selected {
+    background-position: -144px -72px;
+}
+
+/* Buttons */
+.treegrid-rwhov-button {
+    background: transparent;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1px 3px 0 3px;
+    padding: 5px;
+    white-space: no-wrap;
+}
+.treegrid-rwhov-button:hover {
+    animation-name: treegrid-rwhov-button-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes treegrid-rwhov-button-animate-enter {
+    0% { background: transparent; }
+    100% { background: #d5d5d5; }
+}
+.treegrid-rwhov-button-icons {
+    background-image: url(https://www.lidorsystems.com/images/integralui-web/resources/icons-x24.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+}
+.trash {
+    background-position: -72px -48px;
+}
+.favorite {
+    background-position: -216px -72px;
+}
+.favorite-selected {
+    background-position: -144px -72px;
+}
+.statistics {
+    background-position: -216px -168px;
+}
+
+
+/* 
+  Required for StackBlitz only (until handling icons/images from resources is solved)
+*/ 
+.iui-treegrid-expand-box-open
+{
+	background: url(https://www.lidorsystems.com/images/integralui-web/resources/expandbox-icons.png) no-repeat -80px 0;
+}
+.iui-treegrid-expand-box-open:hover
+{
+	background: url(https://www.lidorsystems.com/images/integralui-web/resources/expandbox-icons.png) no-repeat -64px 0;
+}
+.iui-treegrid-expand-box-close
+{
+	background: url(https://www.lidorsystems.com/images/integralui-web/resources/expandbox-icons.png) no-repeat -80px -16px;
+}
+.iui-treegrid-expand-box-close:hover
+{
+	background: url(https://www.lidorsystems.com/images/integralui-web/resources/expandbox-icons.png) no-repeat -64px -16px;
+}

@@ -1,0 +1,22 @@
+<div class="app-block" #application>
+    <iui-treegrid [appRef]="applicationRef" [controlStyle]="treegridStyle" [columns]="columns" [rows]="rows" [rowHeight]="30" [showFooter]="false" [expandColumnID]="1" [gridLines]="gridLines" [showHoverRow]="isHoverRowAllowed" #treegrid>
+        <ng-template let-column [iuiTemplate]="{ type: 'header' }">
+            {{column.headerText}}
+        </ng-template>
+        <ng-template let-cell [iuiTemplate]="{ type: 'cell' }">
+            <span [ngSwitch]="cell.cid">
+                <span *ngSwitchCase="2">
+                    <span class="treegrid-rwhov-cell-favorite" [ngClass]="{ 'treegrid-rwhov-cell-favorite-selected': isFavorite(cell) }" [ngStyle]="{ opacity: isRowHovered(cell) ? 1 : 0.5 }"></span>
+                </span>
+                <span *ngSwitchDefault style="display:inline-block">
+                    <span class="treegrid-rwhov-cell-label">{{cell.text}}</span>
+                </span>
+            </span>
+        </ng-template>
+        <ng-template let-row [iuiTemplate]="{ type: 'row-hover' }">
+            <div class="treegrid-rwhov-button" *ngFor="let button of row.buttons" [iuiTooltip]="button.tooltip" [tooltipRef]="tooltipReference">
+                <span class="treegrid-rwhov-button-icons {{button.icon}}" (click)="rowButtonClicked(row, button)"></span>
+            </div>
+        </ng-template>
+    </iui-treegrid>
+</div>
